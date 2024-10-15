@@ -82,15 +82,15 @@
 		apos_under: apos_dqt {
 			compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp DQT;
+            bindings = <&kp APOS>, <&kp DQT>;
             mods = <(MOD_LSFT)>;
 		};
 		minus_under: minus_under {
 			compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp UNDER;
+            bindings = <&kp MINUS>, <&kp UNDER>;
             mods = <(MOD_LSFT)>;
-		}
+		};
     };
         keymap {
                 compatible = "zmk,keymap";
