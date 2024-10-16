@@ -72,19 +72,19 @@
             #binding-cells = <0>;
             bindings = <&kp AMPS>, <&kp PIPE>;
             mods = <(MOD_LSFT)>;
-		};
-		apos_under: apos_dqt {
-			compatible = "zmk,behavior-mod-morph";
+	};
+	apos_under: apos_dqt {
+	    compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp APOS>, <&kp DQT>;
             mods = <(MOD_LSFT)>;
-		};
-		minus_under: minus_under {
-			compatible = "zmk,behavior-mod-morph";
+	};
+	minus_under: minus_under {
+	    compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp UNDER>;
             mods = <(MOD_LSFT)>;
-		};
+	};
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -146,7 +146,7 @@
                 fun_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &tog COLEMAK   &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG         &trans        &kp F7        &kp F8        &kp F9       &kp F12
+    &tog GAMING   &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG         &trans        &kp F7        &kp F8        &kp F9       &kp F12
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &trans        &kp F4        &kp F5        &kp F6       &kp F11
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
