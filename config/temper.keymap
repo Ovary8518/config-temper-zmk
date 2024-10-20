@@ -84,38 +84,6 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp UNDER>;
             mods = <(MOD_LSFT)>;
-		};
-        ime: gui_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp SPACE>
-                ;
-        };
-		hiragana: ctrl_capslock {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp CAPS>
-                ;
-        };
-		katakana: alt_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp CAPS>
-                ;
-        };
-		romaji: alt_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp GRAVE>
-                ;
         };
     };
         keymap {
@@ -178,13 +146,13 @@
                 fun_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &tog GAMING   &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG        &romaji        &kp F7        &kp F8        &kp F9       &kp F12
+    &tog GAMING   &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG      &kp LA(GRAVE)     &kp F7        &kp F8        &kp F9       &kp F12
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &katakana      &kp F4        &kp F5        &kp F6       &kp F11
+     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp LA(CAPS)      &kp F4        &kp F5        &kp F6       &kp F11
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &bt BT_CLR    &kp C_PREV     &kp C_PP     &kp C_NEXT      &ime            &hiragana      &kp F1        &kp F2        &kp F3       &kp F10
+      &bt BT_CLR    &kp C_PREV     &kp C_PP     &kp C_NEXT   &kp LG(SPACE)    &kp LC(CAPS)      &kp F1        &kp F2        &kp F3       &kp F10
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &trans        &trans        &trans            &trans        &trans        &trans
+                                    &trans        &trans       &trans          &trans        &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
