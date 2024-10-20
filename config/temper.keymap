@@ -85,8 +85,6 @@
             bindings = <&kp MINUS>, <&kp UNDER>;
             mods = <(MOD_LSFT)>;
 		};
-	);
-	macros {
         ime: gui_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
